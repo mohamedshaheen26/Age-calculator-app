@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  height: 100vh;
+  background-color: hsl(0, 0%, 94%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .card {
+  background-color: hsl(0, 0%, 100%);
+  width: 650px;
+  padding: 35px;
+  border-bottom-right-radius: 150px;
+}
+
+main .card form {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+main .card form label {
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+main .card form input {
+  display: block;
+  width: 140px;
+  padding: 10px 10px 10px 20px;
+  font-weight: 700;
+  font-size: 32px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+main .card form input:focus {
+  outline: none;
+  border-color: hsl(259, 100%, 65%);
+}
+
+main .card form input::placeholder {
+  transition: .4s;
+}
+
+main .card form input:focus::placeholder {
+  opacity: 0;
+}
+
+main .card form button {
+  background-color: hsl(259, 100%, 65%);
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  width: 50px;
+  padding: 13px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+main .card form button:hover {
+  background-color: hsl(0, 0%, 8%)
+}
+
+main .card form button img {
+  width: 100%;
+}
+
+.error {
+  border: 1px solid hsl(0, 100%, 67%) !important;
+}
+
+.error-text {
+  color: hsl(0, 100%, 67%);
+
+  font-style: italic;
+  font-size: 9px;
+  font-weight: 300;
+}
+
+.success {
+  border: 2px solid hsl(154, 59%, 51%) !important;
+}
+
+main .card .result {
+  padding-top: 25px;
+  font-size: 70px;
+  line-height: 1.1;
+  font-weight: 800;
+  font-style: italic;
+}
+
+main .card .result span {
+  color: hsl(259, 100%, 65%);
+  margin-right: 5px;
+}
+
+
+@media (max-width: 768px) {
+  main {
+    height: auto;
+    padding: 50px 15px;
+  }
+  main .card {
+    max-width: 100%;
+    padding: 20px;
+  }
+  main .card form {
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+    gap: 15px;
+  }
+  main .card form input {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 25px;
+  }
+  main .card form button {
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+  }
+}
+
+@media (max-width: 420px) {
+  main .card .result {
+    font-size: 40px;
+    padding-bottom: 10px;
+  }
+}
