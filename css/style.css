@@ -34,8 +34,9 @@ main .card form {
 }
 
 main .card form label {
-  font-size: 8px;
-  letter-spacing: 1px;
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: hsl(0, 1%, 44%);
 }
 
 main .card form input {
